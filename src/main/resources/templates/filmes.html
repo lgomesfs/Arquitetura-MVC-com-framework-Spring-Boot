@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmes potentes</title>
+</head>
+<body>
+    <h1>Lista de filmes para ver antes de morrer</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Filme</th>
+                <th>Diretor</th>
+                <th>Duração em minutos</th>
+                <th>Ano de lançamento</th>
+            </tr>
+            </thead>
+            <trbody>
+                <tr th:each="filme: ${filmes}">
+                    <td th:text="${filme.nome}"></td>
+                    <td th:text="${filme.diretor}"></td>
+                    <td th:text="${filme.duracao}"></td>
+                    <td th:text="${filme.lancamento}"></td>
+                </tr>
+            </trbody>
+        </table>
+</body>
+</html>
